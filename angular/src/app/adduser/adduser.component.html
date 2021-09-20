@@ -1,0 +1,80 @@
+
+<div class="container" >
+  <div class="custom_card_class">
+    <div class="custom_card_header">
+      <div class="card-title">
+        {{title}}
+      </div>
+    </div>
+    <div class="custom_card_body">
+      <form  [formGroup]="userForm" (ngSubmit)="addUser()">
+        <div class="row">
+            <div class="form-group">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control"  formControlName="first_name" placeholder="First name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control"  formControlName="last_name"placeholder="Last name">
+                </div>
+              </div>
+            </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="email"  class="form-control" formControlName="email" placeholder="Email">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" maxlength="10"  formControlName="phone" placeholder="Phone">
+              </div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" formControlName="img" placeholder="Image">
+            </div>
+          </div>
+        </div>
+      
+    </div>
+   
+    <div class="col-md-12 text-center" id="button">
+      <button
+        type="submit"
+        class="float-center btn btn-success"
+        id="submit"
+        
+      >
+        Submit
+      </button>
+      <button
+        type="submit"
+        id="cancel"
+        class="float-center btn btn-danger"
+        routerLink="/"
+      >
+        Cancel
+      </button>
+      <button *ngIf="formType!='edit'"
+      (click)="onResetForm()"
+        type="reset"
+        id="reset"     
+        class="float-center btn btn-warning"
+       
+      >
+        Reset
+      </button>
+    </div>
+      </form>
+    </div>
+  </div>
+</div>

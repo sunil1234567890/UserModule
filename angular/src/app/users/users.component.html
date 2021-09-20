@@ -1,0 +1,70 @@
+<div class="card body">
+    <div class="card-header">
+        <h5 class="card-title">{{title}}</h5>  
+    </div>
+    <div class="float-right d-flex justify-content-end">
+        <!-- <nav>
+            <a routerLink="/adduser"  routerLinkActive="active">clcil</a>
+        </nav> -->
+        <button type="button" style="background-color: #00d68f;border-color: #00d68f;margin-left: 1044px;"
+            class="btn btn-success float-right btn-sm" routerLink="/adduser" routerLinkActive="active">Add User</button>
+          
+    </div>
+</div>
+
+
+<div class="card">
+
+    <div class="card-body body">
+        <h5 class="card-title">User List</h5>
+        <div class="col-md-12">
+            <table class="table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th scope="row" class="text-center">Sr. No.</th>
+                        <th scope="row" class="text-center">Firstname
+                        </th>
+                        <th scope="row" class="text-center">Lastmname
+                        </th>
+                        <th scope="row" class="text-center">Email
+
+                        </th>
+                        <th scope="row" class="text-center">Phone
+                        </th>
+                        <th scope="row" class="text-center">Image
+                        </th>
+                        <th scope="row" class="text-center">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let item of userData; let i = index;">
+                        <td>{{i+1}}</td>
+                        <td class="textright">{{item.first_name}}</td>
+                        <td class="textright">
+                            {{item.last_name}} </td>
+                        <td class="textright">{{item.email}} </td>
+                        <td class="textright">{{item.phone}}</td>
+                        <td class="textleft">{{item.profile}}</td>
+                        <td>
+                            <a class="action-btn" [routerLink]="['/viewuser',item._id]">
+                                <i class="material-icons">visibility</i>
+
+                            </a>
+                            <a class="action-btn" [routerLink]="['/edituser',item._id]">
+                                <i class="material-icons">edit</i>
+
+                            </a>
+                            <a class="action-btn" (click)="onDeleteData(item._id)">
+                                <i class="material-icons">delete</i>
+
+                            </a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

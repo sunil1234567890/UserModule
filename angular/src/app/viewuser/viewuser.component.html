@@ -1,0 +1,55 @@
+
+
+<div class="container" >
+    <div class="custom_card_class">
+      <div class="custom_card_header">
+        <div class="card-title">
+       {{title}}
+        </div>
+      </div>
+      <div class="custom_card_body">
+        <form  [formGroup]="userForm">
+          <div class="row">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" [readonly]="true" class="form-control"  formControlName="first_name" placeholder="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text"  [readonly]="true"class="form-control"  formControlName="last_name"placeholder="Last name">
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+  
+          <div class="row">
+            <div class="form-group">
+              <div class="row">
+                <div class="col">
+                  <input type="email" [readonly]="true" class="form-control" formControlName="email" placeholder="Email">
+                </div>
+                <div class="col">
+                  <input type="text" [readonly]="true" class="form-control"   formControlName="phone" placeholder="Phone">
+                </div>
+              </div>
+            </div>
+          
+        </div>
+  
+        <div class="row">
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" [readonly]="true" class="form-control" formControlName="img" placeholder="Image">
+              </div>
+            </div>
+          </div>
+        
+      </div>
+     
+     
+        </form>
+      </div>
+    </div>
+  </div>
